@@ -1,6 +1,6 @@
-1. awk '{if ($10 ~ /^[0-9]+$/) a[$1] += $10} END {for (ip in a) print a[ip] " bytes for " ip}' access.log
+1. ```awk '{if ($10 ~ /^[0-9]+$/) a[$1] += $10} END {for (ip in a) print a[ip] " bytes for " ip}' access.log```
 
-2. lsof -i TCP -s TCP:ESTABLISHED
+2. ```lsof -i TCP -s TCP:ESTABLISHED```
 
 3. Сервис стал недоступен из-за исчерпания лимита подключений к MySQL (метрика max_connections). База перегрузилась из-за большого количества одновременно выполняющихся запросов. Время недоступности: с 13:00 до 13:20 и дольше, так как на графиках нет момента восстановления сервиса.
 
